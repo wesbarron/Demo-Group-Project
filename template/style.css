@@ -35,7 +35,8 @@ nav .item {
     transform: rotate(-45deg);
 }
 nav .active {
-    border-bottom: 1px solid;
+    color: white;
+    background: #5D5D5D;
 }
 
 header {
