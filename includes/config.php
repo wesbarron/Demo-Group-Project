@@ -8,9 +8,9 @@
 function config($key = '')
 {
     $config = [
-        'name' => 'DIY Accoustic to Electric Hybrid Drum Kit',
+        'name' => 'MOVIE REPO',
         'pretty_uri' => false,
-        'site_url' => 'https://my-first-project-cpsc-4125.herokuapp.com/',
+        'site_url' => 'https://group-demo-project.herokuapp.com/',
         'nav_menu' => [
             '' => 'Home',
             'about-me' => 'About Me'
