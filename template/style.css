@@ -17,6 +17,22 @@ article {
 
 nav .item {
     text-decoration: none;
+    font-family: 'Passion One', sans-serif;
+    font-weight: 400;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 100;
+    float: left;
+    width: 250px;
+    height: 48px;
+    margin-left: -165px;
+    line-height: 1;
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
 nav .active {
     border-bottom: 1px solid;
