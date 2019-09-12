@@ -1,6 +1,5 @@
 body {
-    background-color: #309630;
-    background-image: linear-gradient(to bottom right, #309630,#000060);
+    background-color: aqau;
 }
 .wrap {
     max-width: 720px;
@@ -20,4 +19,11 @@ nav .item {
 }
 nav .active {
     border-bottom: 1px solid;
+}
+
+header {
+    background-color: black;
+    color: silver;
+    text-align: center;
+    font-size: 30px;
 }
