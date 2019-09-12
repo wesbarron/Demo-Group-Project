@@ -39,6 +39,7 @@ nav .item {
 
 nav .item:hover {
     color: #404040;
+    background-color: white;
 }
 
 nav .active {
@@ -51,4 +52,8 @@ header {
     color: silver;
     text-align: center;
     font-size: 30px;
+}
+
+html {
+    background-color: black;
 }

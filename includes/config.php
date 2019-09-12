@@ -13,7 +13,7 @@ function config($key = '')
         'site_url' => 'https://group-demo-project.herokuapp.com/',
         'nav_menu' => [
             '' => 'Home',
-            'about-me' => 'About Me'
+            'search' => 'Search'
         ],
         'template_path' => 'template',
         'content_path' => 'content',
