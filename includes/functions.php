@@ -80,7 +80,7 @@ function search_url() {
     $api_key = "&apikey=d42aca4a";
     $search_url = $url . $search_key . $api_key;
 }
-*/
+
 function start_curl() {
     $handle = curl_init();
     curl_setopt($handle, CURLOPT_URL, $search_url);
@@ -94,7 +94,7 @@ function start_curl() {
     $response = json_decode($output, true);
     curl_close($handle);
 }
-
+/*
 
 
 ?>
