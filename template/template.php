@@ -6,7 +6,7 @@
     <link href="/template/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<div class="container">
+<div class="wrap">
 
     <header>
         <h1><?php site_name(); ?></h1>

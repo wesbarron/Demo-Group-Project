@@ -72,7 +72,7 @@ function init()
 {
     require config('template_path') . '/template.php';
 }
-
+/*
 function search_url() {
     $search_key = $_GET["name"];
     strtolower($search_key);
@@ -95,6 +95,6 @@ function start_curl() {
     curl_close($handle);
 }
 
-
+*/
 
 ?>
