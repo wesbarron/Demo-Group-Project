@@ -74,13 +74,13 @@ function init()
 }
 /*
 function search_url() {
-    $search_key = $_GET["name"];
+    $search_key = $_GET['name'];
     strtolower($search_key);
     $search_key = str_replace(" ", "+", $search_key);
     $api_key = "&apikey=d42aca4a";
     $search_url = $url . $search_key . $api_key;
 }
-
+*/
 function start_curl() {
     $handle = curl_init();
     curl_setopt($handle, CURLOPT_URL, $search_url);
@@ -95,6 +95,6 @@ function start_curl() {
     curl_close($handle);
 }
 
-*/
+
 
 ?>
