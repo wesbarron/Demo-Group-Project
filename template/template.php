@@ -6,7 +6,7 @@
     <link href="/template/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<div class="wrap">
+<div class="container">
 
     <header>
         <h1><?php site_name(); ?></h1>
@@ -18,6 +18,8 @@
     <article>
         <h2><?php page_title(); ?></h2>
         <?php page_content(); ?>
+        <?php search_url(); ?>
+        <?php start_curl(); ?>
     </article>
 
     <footer>
