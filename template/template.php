@@ -17,7 +17,8 @@
 
     <article>
         <h2><?php page_title(); ?></h2>
-        <?php page_content();
+        <?php page_content(); ?>
+        <?php
         $url = "http://www.omdbapi.com/?s=";
         //echo ("<p>My wesite is:</p><br>");
         $search_key = $_GET["name"];
@@ -46,7 +47,7 @@
         }
         $output .= "</ul>";
         echo $output;
-         ?>
+        ?>
     </article>
 
     <footer>
