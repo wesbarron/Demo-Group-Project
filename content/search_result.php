@@ -34,6 +34,9 @@ $output .= "<h3>".$movie['Title']."</h3>";
 $output .= "<li>".$movie['Year']."</li>";
 $output .= "<img src='" . $movie['Poster'] . "' width='250px' height='300px' alt='Comming Soon!'>";
 $output .= "</a><br><br><br>";
+
+}
+$output .= "</ul>";
 $output .= '<!-- The Modal -->
   <div class="modal" id="myModal">
     <div class="modal-dialog">
@@ -60,9 +63,6 @@ $output .= '<!-- The Modal -->
       </div>
     </div>
   </div>';
-}
-$output .= "</ul>";
-
 echo $output;
 ?>
 
