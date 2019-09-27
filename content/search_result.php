@@ -34,7 +34,7 @@ $output .= "<h3>".$movie['Title']."</h3>";
 $output .= "<li>".$movie['Year']."</li>";
 $output .= "<img src='" . $movie['Poster'] . "' width='250px' height='300px' alt='Comming Soon!'>";
 $output .= "</a><br><br><br>";
-for ($i = 0; $i < sizeof($movie); $i++) {
+    if ($output == $movie['Title']) {
 $output .= '<!-- The Modal -->
   <div class="modal" id="myModal">
     <div class="modal-dialog">
