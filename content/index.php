@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+<div class="container">
   <form id="contact" action="content/search_result.php" target="_blank" method="get">
     <h3>Movie Search</h3>
 
