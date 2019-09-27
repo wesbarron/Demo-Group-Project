@@ -29,7 +29,7 @@ curl_close($handle);
 
 $output = "<ul>";
 foreach ($response['Search'] as $movie) {
-$output .= '<a data-toggle="modal" data-target="#myModal">';
+$output .= '<a class="movie-click" data-toggle="modal" data-target="#myModal">';
 $output .= "<h3>".$movie['Title']."</h3>";
 $output .= "<li>".$movie['Year']."</li>";
 $output .= "<img src='" . $movie['Poster'] . "' width='250px' height='300px' alt='Comming Soon!'>";
@@ -76,6 +76,25 @@ echo $output;
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://use.fontawesome.com/f1c966bcb4.js"></script>
 
+      <script>
+      $('.movie-click').click(function (e){
+          $.ajax({
+              type: 'get',
+              url: "search_result.php",
+              data: {data : true},
+              dataType:"HTML",
+              success: function(data)
+              {
+                  $('.modal-body').html(data) // The server's response is now placed inside your target div
+              },
+              error: function()
+              {
+                  alert("Failed to get data.");
+            }
+          }); // Ajax close
+          return false; // So the button click does not refresh the page
+      }) // Function end
+    </script>
 
   </body>
   </html>
