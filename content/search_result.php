@@ -33,9 +33,6 @@ $output .= '<a data-toggle="modal" data-target="#myModal">';
 $output .= "<h3>".$movie['Title']."</h3>";
 $output .= "<li>".$movie['Year']."</li>";
 $output .= "<img src='" . $movie['Poster'] . "' width='250px' height='300px' alt='Comming Soon!'>";
-$output .= "</a><br><br><br>";
-
-}
 $output .= '<!-- The Modal -->
   <div class="modal" id="myModal">
     <div class="modal-dialog">
@@ -62,7 +59,9 @@ $output .= '<!-- The Modal -->
       </div>
     </div>
   </div>';
+$output .= "</a><br><br><br>";
 
+}
 $output .= "</ul>";
 
 echo $output;
