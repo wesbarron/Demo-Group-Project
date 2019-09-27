@@ -22,15 +22,15 @@ $output = curl_exec($handle);
 $response = json_decode($output, true);
 curl_close($handle);
 
-$output = "<div id='movie-div' class='btn btn-primary' data-toggle='modal' data-target='#myModal'>";
-$output .= "<ul>";
+
+$output = "<ul>";
 foreach ($response['Search'] as $movie) {
 $output .= "<h3>".$movie['Title']."</h3>";
 $output .= "<li>".$movie['Year']."</li>";
 $output .= "<img src='" . $movie['Poster'] . "' width='250px' height='300px' alt='Comming Soon!'>";
 }
 $output .= "</ul>";
-$output .= "</div>";
+
 echo $output;
 ?>
 
