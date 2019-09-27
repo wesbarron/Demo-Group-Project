@@ -36,7 +36,7 @@ $output .= "<li>".$movie['Year']."</li>";
 $output .= "<img src='" . $movie['Poster'] . "' width='250px' height='300px' alt='Comming Soon!'>";
 $output .= '</a>';
 }
-$output .= "</ul>";
+$output .= "</ul><br><br><br>";
 
 echo $output;
 ?>
@@ -48,7 +48,7 @@ echo $output;
 
         <!-- Modal Header -->
         <div class="modal-header">
-          <h4 class="modal-title">Modal Heading</h4>
+          <h4 class="modal-title"><?php $movie['Title'] ?></h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
 
