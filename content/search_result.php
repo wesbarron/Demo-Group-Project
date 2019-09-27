@@ -25,11 +25,11 @@ curl_close($handle);
 
 $output = "<ul>";
 foreach ($response['Search'] as $movie) {
-$output .= '<div class="btn btn-primary" data-toggle="modal" data-target="#myModal">';
+$output .= '<a data-toggle="modal" data-target="#myModal">';
 $output .= "<h3>".$movie['Title']."</h3>";
 $output .= "<li>".$movie['Year']."</li>";
 $output .= "<img src='" . $movie['Poster'] . "' width='250px' height='300px' alt='Comming Soon!'>";
-$output .= '</div>';
+$output .= '</a>';
 }
 $output .= "</ul>";
 
