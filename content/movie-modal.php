@@ -45,5 +45,6 @@ $output .= '<!-- The Modal -->
       </div>
     </div>
   </div>';
+  echo $output;
 ?>
 
