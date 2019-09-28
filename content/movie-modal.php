@@ -26,7 +26,7 @@ array(
 $output = curl_exec($handle);
 $response = json_decode($output, true);
 curl_close($handle);
-if ($search_key = $movie['Title']) {
+
 $output = '<!-- The Modal -->
   <div class="modal" id="myModal">
     <div class="modal-dialog">
@@ -55,7 +55,7 @@ $output = '<!-- The Modal -->
   </div>';
   $output .= $search_key;
   echo $output;
-}
+
 ?>
 
  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -64,7 +64,7 @@ $output = '<!-- The Modal -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://use.fontawesome.com/f1c966bcb4.js"></script>
 
-      <script>
+      <script>/*
       $('.movie-click').click(function (e){
           $.ajax({
               type: 'get',
@@ -81,7 +81,7 @@ $output = '<!-- The Modal -->
             }
           }); // Ajax close
           return false; // So the button click does not refresh the page
-      }) // Function end
+      }) // Function end */
     </script>
 
   </body>
