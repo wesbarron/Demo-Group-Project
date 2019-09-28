@@ -1,7 +1,8 @@
 <?php
+include 'search_result.php';
 
 $url = "http://www.omdbapi.com/?i=";
-$search_key = $movie["imdbID"];
+$search_key = $movie['imdbID'];
 //strtolower($search_key);
 //$search_key = str_replace(" ", "+", $search_key);
 $api_key = "&apikey=d42aca4a";
