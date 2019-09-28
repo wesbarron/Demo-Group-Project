@@ -5,7 +5,7 @@
 </head>
 <body>
 <div id="modal-target-id">
-<?php "<h1>" . $movie['imdbID'] . "</h1>" ?>;
+
 </div>
 <?php
 
@@ -34,6 +34,7 @@ foreach ($response['Search'] as $movie) {
 $output .= '<a class="movie-click" data-toggle="modal" data-target="#myModal">';
 $output .= "<h3>".$movie['Title']."</h3>";
 $output .= "<li>".$movie['Year']."</li>";
+$output .= "<li>".$movie['imdbID']."</li>";
 $output .= "<img src='" . $movie['Poster'] . "' width='250px' height='300px' alt='Comming Soon!'>";
 $output .= "</a><br><br><br>";
 }
