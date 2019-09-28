@@ -5,7 +5,7 @@
 </head>
 <body>
 <div id="modal-target-id">
-
+<?php $movie['imdbID']; ?>;
 </div>
 <?php
 
