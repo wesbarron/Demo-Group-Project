@@ -2,7 +2,7 @@
 include 'search_result.php';
 
 $url = "http://www.omdbapi.com/?i=";
-$search_key = $movie['imdbID'];
+$search_key = $_GET["name"];
 //strtolower($search_key);
 //$search_key = str_replace(" ", "+", $search_key);
 $api_key = "&apikey=d42aca4a";
@@ -19,7 +19,7 @@ array(
 $output = curl_exec($handle);
 $response = json_decode($output, true);
 curl_close($handle);
-
+if ($search_key = $movie['Title']) {
 $output = '<!-- The Modal -->
   <div class="modal" id="myModal">
     <div class="modal-dialog">
@@ -48,5 +48,6 @@ $output = '<!-- The Modal -->
   </div>';
   $output .= $search_key;
   echo $output;
+}
 ?>
 
