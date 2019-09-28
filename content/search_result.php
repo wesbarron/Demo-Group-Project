@@ -56,7 +56,7 @@ echo $output;
               dataType:"HTML",
               success: function(data)
               {
-                  $('.movie-click').html(data) // The server's response is now placed inside your target div
+                  $('.modal-content').html(data) // The server's response is now placed inside your target div
               },
               error: function()
               {
