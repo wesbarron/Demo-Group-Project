@@ -1,3 +1,26 @@
+<?php
+
+$url = "http://www.omdbapi.com/?i=";
+$search_key = $movie["imdbID"];
+//strtolower($search_key);
+//$search_key = str_replace(" ", "+", $search_key);
+$api_key = "&apikey=d42aca4a";
+$search_url = $url . $search_key . $api_key;
+
+$handle = curl_init();
+curl_setopt($handle, CURLOPT_URL, $search_url);
+curl_setopt_array($handle,
+array(
+    CURLOPT_URL => $search_url,
+    CURLOPT_RETURNTRANSFER => true
+)
+);
+$output = curl_exec($handle);
+$response = json_decode($output, true);
+curl_close($handle);
+alert(search_url);
+?>
+
 '<!-- The Modal -->
   <div class="modal" id="myModal">
     <div class="modal-dialog">

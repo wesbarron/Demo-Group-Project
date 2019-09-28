@@ -5,9 +5,7 @@
 <body>
 <?php
 
-//echo ("<h1>You searched for:</h1><br>");
 $url = "http://www.omdbapi.com/?s=";
-//echo ("<p>My wesite is:</p><br>");
 $search_key = $_GET["name"];
 strtolower($search_key);
 $search_key = str_replace(" ", "+", $search_key);
