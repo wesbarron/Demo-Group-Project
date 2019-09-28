@@ -50,7 +50,7 @@ echo $output;
       $('.movie-click').click(function (e){
           $.ajax({
               type: 'get',
-              url: "movie_modal.php",
+              url: "movie-modal.php",
               data: {data : true},
               dataType:"HTML",
               success: function(data)
