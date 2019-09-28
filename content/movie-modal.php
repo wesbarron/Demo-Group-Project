@@ -19,7 +19,8 @@ array(
 $output = curl_exec($handle);
 $response = json_decode($output, true);
 curl_close($handle);
-$output .= '<!-- The Modal -->
+
+$output = '<!-- The Modal -->
   <div class="modal" id="myModal">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -45,6 +46,7 @@ $output .= '<!-- The Modal -->
       </div>
     </div>
   </div>';
+  $output .= $search_key;
   echo $output;
 ?>
 
