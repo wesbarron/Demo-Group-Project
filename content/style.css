@@ -116,3 +116,9 @@ fieldset {
 :-ms-input-placeholder {
  color:#888;
 }
+
+.movie-click:hover {
+    background-color: silver;
+    background-position: center;
+    cursor: pointer;
+}

@@ -55,7 +55,7 @@ echo $output;
               dataType:"HTML",
               success: function(data)
               {
-                  $('.modal-body').html(data) // The server's response is now placed inside your target div
+                  $('#myModal').html(data) // The server's response is now placed inside your target div
               },
               error: function()
               {
