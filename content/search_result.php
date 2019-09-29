@@ -4,9 +4,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-<div id="modal-target-id">
 
-</div>
 <?php
 
 $url = "http://www.omdbapi.com/?s=";
@@ -60,7 +58,7 @@ echo $output;
               dataType:"HTML",
               success: function(data)
               {
-                  $('#modal-target-id').html(data) // The server's response is now placed inside your target div
+                  $('.modal-content').html(data) // The server's response is now placed inside your target div
               },
               error: function()
               {
