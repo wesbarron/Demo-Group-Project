@@ -53,7 +53,7 @@ $output = '<!-- The Modal -->
       </div>
     </div>
   </div>';
-  $output .= $search_key;
+
   echo $output;
 
 ?>
