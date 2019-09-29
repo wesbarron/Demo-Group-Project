@@ -34,6 +34,11 @@ $output .= "<h3>".$movie['Title']."</h3>";
 $output .= "<li>".$movie['Year']."</li>";
 $output .= "<li class='imdb-ID'>".$movie['imdbID']."</li>";
 $output .= "<img src='" . $movie['Poster'] . "' width='250px' height='300px' alt='Comming Soon!'>";
+$output .= "</a>";
+
+}
+$output .= "</ul>";
+
 $output .= "<button type='button' class='btn btn-primary' data-toggle='modal' data-target='#myModal'>
   More Info
 </button>";
@@ -63,9 +68,6 @@ $output .= '<!-- The Modal -->
       </div>
     </div>
   </div>';
-$output .= "</a>";
-}
-$output .= "</ul>";
 
 echo $output;
 ?>
