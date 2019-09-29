@@ -9,7 +9,8 @@
 include 'search_result.php';
 
 $url = "http://www.omdbapi.com/?i=";
-$search_key = $_GET['<script>document.getElementByClassName("imdb-ID")</script>'];
+$_GET['name'];
+$search_key = "<script>document.getElementByClassName('imdb-ID')</script>";
 //strtolower($search_key);
 //$search_key = str_replace(" ", "+", $search_key);
 $api_key = "&apikey=d42aca4a";
