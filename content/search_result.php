@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
-<body>
+<body id="body-content">
 
 <?php
 
@@ -29,7 +29,7 @@ curl_close($handle);
 
 $output = "<ul>";
 foreach ($response['Search'] as $movie) {
-$output .= '<a class="movie-click" data-toggle="modal" data-target="#myModal">';
+$output .= '<a id="movie-click" data-toggle="modal" data-target="#myModal">';
 $output .= "<h3>".$movie['Title']."</h3>";
 $output .= "<li>".$movie['Year']."</li>";
 $output .= "<li class='imdb-ID'>".$movie['imdbID']."</li>";
@@ -41,9 +41,6 @@ $output .= "</ul>";
 echo $output;
 ?>
 
-<div id="my-content">
-
-</div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -52,7 +49,7 @@ echo $output;
     <script src="https://use.fontawesome.com/f1c966bcb4.js"></script>
 
       <script>
-      $('.movie-click').click(function (e){
+      $('#movie-click').click(function (e){
           $.ajax({
               type: 'get',
               url: "movie-modal.php",
@@ -60,7 +57,7 @@ echo $output;
               dataType:"HTML",
               success: function(data)
               {
-                  $('#my-content').html(data) // The server's response is now placed inside your target div
+                  $('#body-content').html(data) // The server's response is now placed inside your target div
               },
               error: function()
               {
