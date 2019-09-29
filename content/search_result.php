@@ -29,7 +29,7 @@ curl_close($handle);
 
 $output = "<ul>";
 foreach ($response['Search'] as $movie) {
-$output .= '<a id="movie-click" data-toggle="modal" data-target="#myModal">';
+//$output .= '<a id="movie-click" data-toggle="modal" data-target="#myModal">';
 $output .= "<h3>".$movie['Title']."</h3>";
 $output .= "<li>".$movie['Year']."</li>";
 $output .= "<li class='imdb-ID'>".$movie['imdbID']."</li>";
