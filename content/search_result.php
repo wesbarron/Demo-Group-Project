@@ -26,8 +26,8 @@ $output = curl_exec($handle);
 $response = json_decode($output, true);
 curl_close($handle);
 
-
-$output = "<ul>";
+$output = "<div id='modal-div' data-toggle='modal' data-target='#myModal'>";
+$output .= "<ul>";
 foreach ($response['Search'] as $movie) {
 //$output .= '<a id="movie-click" data-toggle="modal" data-target="#myModal">';
 $output .= "<h3>".$movie['Title']."</h3>";
@@ -35,13 +35,6 @@ $output .= "<li>".$movie['Year']."</li>";
 $output .= "<li class='imdb-ID'>".$movie['imdbID']."</li>";
 $output .= "<img src='" . $movie['Poster'] . "' width='250px' height='300px' alt='Comming Soon!'>";
 $output .= "</a>";
-
-}
-$output .= "</ul>";
-
-$output .= "<button type='button' class='btn btn-primary' data-toggle='modal' data-target='#myModal'>
-  More Info
-</button>";
 $output .= '<!-- The Modal -->
   <div class="modal" id="myModal">
     <div class="modal-dialog">
@@ -68,6 +61,14 @@ $output .= '<!-- The Modal -->
       </div>
     </div>
   </div>';
+}
+$output .= "</ul>";
+$output .= "</div>";
+
+$output .= "<button type='button' class='btn btn-primary' data-toggle='modal' data-target='#myModal'>
+  More Info
+</button>";
+
 
 echo $output;
 ?>
