@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="container">
-  <form id="contact" action="/search_result.php" target="_blank" method="get">
+  <form id="contact" action="/search_result.php" target="_blank" method="post">
     <h3>Movie Search</h3>
 
     <fieldset>
