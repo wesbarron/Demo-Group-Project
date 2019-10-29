@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="container">
-  <form id="contact" action="/search_result.php" target="_blank" method="post">
+  <form id="contact" action="" target="_blank" method="post">
     <h3>Movie Search</h3>
 
     <fieldset>
@@ -23,7 +23,11 @@
 </div>
 
 <div>
-<?php getComic() ?>
+<?php
+if(isset($_POST['name'])){
+ getComic('name')
+}
+?>
 </div>
 
 
