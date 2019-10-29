@@ -7,7 +7,7 @@
 
 <?php
 
-
+function getComic(){
 $url = "http://www.omdbapi.com/?s=";
 $search_key = $_POST["name"];
 strtolower($search_key);
@@ -41,7 +41,6 @@ $output .= "<img src='" . $movie['Poster'] . "' width='250px' height='300px' alt
 $output .= "</ul>";
 $output .= "</div>";
 
-function getComic($output){
 echo $output;
 }
 

@@ -24,8 +24,8 @@
 
 <div>
 <?php
-if(isset($_POST['submit'])){
- getComic('submit');
+if(isset($_POST['name'])){
+ getComic('name');
 }
 ?>
 </div>
