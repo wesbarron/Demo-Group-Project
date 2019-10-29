@@ -22,6 +22,10 @@
 
 </div>
 
+<div>
+<?php getComic() ?>
+</div>
+
 
 </body>
 </html>

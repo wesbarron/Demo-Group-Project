@@ -7,12 +7,14 @@
 
 <?php
 
+
 $url = "http://www.omdbapi.com/?s=";
 $search_key = $_POST["name"];
 strtolower($search_key);
 $search_key = str_replace(" ", "+", $search_key);
 $api_key = "&apikey=d42aca4a";
 $search_url = $url . $search_key . $api_key;
+
 
 $handle = curl_init();
 curl_setopt($handle, CURLOPT_URL, $search_url);
@@ -26,51 +28,24 @@ $output = curl_exec($handle);
 $response = json_decode($output, true);
 curl_close($handle);
 
-$output = "<div id='modal-div' data-toggle='modal' data-target='#myModal'>";
+
+$output = "<div>";
 $output .= "<ul>";
+
 foreach ($response['Search'] as $movie) {
-//$output .= '<a id="movie-click" data-toggle="modal" data-target="#myModal">';
 $output .= "<h3>".$movie['Title']."</h3>";
 $output .= "<li>".$movie['Year']."</li>";
 $output .= "<li class='imdb-ID'>".$movie['imdbID']."</li>";
 $output .= "<img src='" . $movie['Poster'] . "' width='250px' height='300px' alt='Comming Soon!'>";
-$output .= "</a>";
-$output .= '<!-- The Modal -->
-  <div class="modal" id="myModal">
-    <div class="modal-dialog">
-      <div class="modal-content">
-
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title">'.$movie["Title"].'</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-
-        <!-- Modal body -->
-        <div class="modal-body">
-          Year: ' . $movie["Year"] . '<br>
-          imdbID: ' . $movie["imdbID"] . '<br>
-          Type: ' . $movie["Type"] . '<br>
-        </div>
-
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-        </div>
-
-      </div>
-    </div>
-  </div>';
 }
 $output .= "</ul>";
 $output .= "</div>";
 
-$output .= "<button type='button' class='btn btn-primary' data-toggle='modal' data-target='#myModal'>
-  More Info
-</button>";
-
-
+function getComic($output){
 echo $output;
+}
+
+
 ?>
 
 
@@ -80,25 +55,6 @@ echo $output;
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://use.fontawesome.com/f1c966bcb4.js"></script>
 
-     <!-- <script>
-      $('#movie-click').click(function (e){
-          $.ajax({
-              type: 'get',
-              url: "movie-modal.php",
-              data: {data : true},
-              dataType:"HTML",
-              success: function(data)
-              {
-                  $('#body-content').html(data) // The server's response is now placed inside your target div
-              },
-              error: function()
-              {
-                  alert("Failed to get data.");
-            }
-          }); // Ajax close
-          return false; // So the button click does not refresh the page
-      }) // Function end
-    </script>-->
 
   </body>
   </html>
