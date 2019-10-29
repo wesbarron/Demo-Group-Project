@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="container">
-  <form id="contact" action="" target="_blank" method="post">
+  <form id="contact" action="" method="post">
     <h3>Movie Search</h3>
 
     <fieldset>
